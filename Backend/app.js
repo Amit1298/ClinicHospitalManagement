@@ -1,3 +1,14 @@
+const express = require('express');
+const rooms = require('./routes/rooms');
+const app = express();
+
+app.use(express.json());
+app.use('/api', rooms);
+
+app.listen(3001,()=>{
+    console.log("Serer is started");
+});
+
 // console.log("Hello Clinic");
 
 /*
@@ -24,7 +35,7 @@ app.listen(4500,()=>{
     console.log("Server is Started");
 })
 */
-
+/*
 const express = require('express');
 const app = express();
 
@@ -76,12 +87,17 @@ app.get("/api/hospital",(req,res)=>{
     res.status(200).json({message: "Scussfully",data:req.query})
 })
 
-app.post('/api/create-book', (req, res)=> {
-    console.log(req.body);
-    res.status(200).json({message: 'Sucessful'});
-    res.status(200).json({message:"Successful",data:req.body});
-    });
+// app.post('/api/add-patient', (req, res)=> {
+//     console.log(req.body);
+//     res.status(200).json({message: 'Sucessful'});
+//     res.status(200).json({message:"Successful",data:req.body});
+//     });
+
+app.post("/jeneralword/hospital",(req,res)=>{
+    res.send("Yes i am in post method");
+})
 
 app.listen(4500,()=>{
     console.log("Server is Started");
 });
+*/
