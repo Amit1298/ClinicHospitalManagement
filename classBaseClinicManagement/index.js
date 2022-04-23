@@ -60,3 +60,13 @@ let users = [
       };
     }
   }
+
+  /**
+UC2: bility to add a new
+Contact to clinic management
+ */
+// Generating array of Users
+const details = users.map((user) => {
+    return new clinicManagementMain(...user);
+  });
+  console.log(details);
