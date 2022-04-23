@@ -70,3 +70,23 @@ const details = users.map((user) => {
     return new clinicManagementMain(...user);
   });
   console.log(details);
+
+/**
+ UC3: Ability to edit
+existing contact
+person using their
+name
+ */
+// Update any user detail
+console.log('-----------------------------------------------');
+const updatedDetails = details.map((user) => {
+  if (user.firstName === 'Krishna') {
+    return {
+      ...user,
+      lastName: 'Patil',
+    };
+  }
+  return user;
+});
+console.log(updatedDetails);
+
