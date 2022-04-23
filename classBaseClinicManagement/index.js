@@ -90,3 +90,12 @@ const updatedDetails = details.map((user) => {
 });
 console.log(updatedDetails);
 
+/**
+ UC4: Ability to delete a
+person using
+person's name
+ */
+// Delete User
+console.log('-----------------------------------------------');
+const finalArr = updatedDetails.filter((user) => user.firstName !== 'Krishna');
+console.log(finalArr);
